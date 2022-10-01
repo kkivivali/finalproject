@@ -18,7 +18,7 @@ const Account = () => {
     <div>
     <p>User Email: {user && user.email}</p>
 
-    <button onClick={handleLogout}>Log Out</button>
+    <button onClick={handleLogout} className="btn">Log Out</button>
  
   </div>
    )

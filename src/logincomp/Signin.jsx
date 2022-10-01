@@ -34,7 +34,7 @@ const Signin = () => {
             <label className='password'>Password</label>
             <input  onChange={(e) => setPassword(e.target.value)} type="password" />
         </div>
-        <button className='logBtn'>Logi Sisse</button>
+        <button className="btn">Logi Sisse</button>
     </form>
 </div>
   )
