@@ -1,5 +1,4 @@
 import React from 'react'
-//import { Route, Routes } from 'react-router-dom'
 import '../App.scss';
 import { useNavigate } from 'react-router-dom'
 import { UserAuth } from './context/AuthContext';
@@ -25,15 +24,15 @@ const Signup = () => {
         }
     }
   return (
-    <div>Welcome to the registration Page
+    <div className='form'>Welcome to the registration Page
         <form onSubmit={handleSubmit}>
             <div className='emailForm'>
-                <label className='emailAddress'>Email Address</label>
-                <input onChange={(e)=>setEmail(e.target.value)} type="email" />      
+                <label className='emailAddress' >Email Address</label>
+                <input onChange={(e)=>setEmail(e.target.value)} placeholder='E-mail' type="email" />      
             </div>           
             <div className='passwordForm'>
-                <label className='password'>Password</label>
-                <input onChange={(e)=>setPassword(e.target.value)}type="password" />
+                <label className='password' >Password</label>
+                <input onChange={(e)=>setPassword(e.target.value)} placeholder='Password' type="password" />
             </div>
             <button className="btn">Registreeri</button>
         </form>

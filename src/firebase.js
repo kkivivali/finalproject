@@ -1,14 +1,16 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth"
+require('dotenv').config()
 
+const apiKey = process.env.API_KEY
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC-D-7mzK-s5RMpjr5RXSjieW_x8oHszdo",
+  apiKey: apiKey,
   authDomain: "finalproject-sda.firebaseapp.com",
   projectId: "finalproject-sda",
   storageBucket: "finalproject-sda.appspot.com",
