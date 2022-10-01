@@ -1,0 +1,66 @@
+body{
+    background-color:#dcdcdc;
+}
+.header {
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 10vh;
+    background-color: #808080;
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    height: 150px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, .25);
+    & a{
+        text-decoration: none;
+        color: black;
+    }
+}
+.container {
+    float:right;
+    width: 70%;
+    background-color: #eeff1b;
+}
+.login {
+    float:right;
+    width: 70%;
+    background-color: #eeff1b;
+}
+.navMenu{
+    width:30%;
+}
+.menuContent{
+    border: 1px solid black;
+    font-family: 'Calligraffitti', cursive;
+    font-weight: bold;
+    border: 1px solid gray;
+    align-items: center;
+    background-color: #989898;
+    color: #eeff1b;
+    h3{
+        font-size: 3vh;
+        font-family: 'Rubik Dirt', cursive;
+        color: black;
+    }
+}
+.card {
+    border: 1px solid black;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, .25);
+    border-radius: 8px;
+    align-items: center;
+    transition: 2s;
+    height: 7vh;
+    &:hover {
+        border: 1px solid gray;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, .25);
+        border-radius: 8px;
+        height: 12vh;
+        align-items: center;
+        transition: 4s;
+    }
+    a{
+        text-decoration:none;
+        color: inherit;
+    }
+}
