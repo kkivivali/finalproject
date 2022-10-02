@@ -10,7 +10,6 @@ const Signin = () => {
   const [error, setError] = useState('')
   const navigate = useNavigate();
   const { signIn } = UserAuth();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('')
@@ -22,19 +21,18 @@ const Signin = () => {
       setError(e.message)
     }
   }
-
   return (
     <div>Welcome to the login Page
     <form onSubmit={handleSubmit}>
-        <div className='userForm'>
+        <div className='loginForm'>
             <label className='username'>E-Mail</label>
-            <input onChange={(e) => setEmail(e.target.value)} type="username" />
+            <input className='user' onChange={(e) => setEmail(e.target.value)} type="username" />
         </div>
         <div className='passwordForm'>
             <label className='password'>Password</label>
             <input  onChange={(e) => setPassword(e.target.value)} type="password" />
         </div>
-        <button className='logBtn'>Logi Sisse</button>
+        <button className='formLogBtn'>Logi Sisse</button>
     </form>
 </div>
   )

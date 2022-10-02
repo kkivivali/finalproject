@@ -12,7 +12,6 @@ const Signup = () => {
     const [error, setError] = useState('')
     const {createUser} = UserAuth()
     const navigate = useNavigate()
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError('')
@@ -26,17 +25,19 @@ const Signup = () => {
     }
   return (
     <div>Welcome to the registration Page
-        <form onSubmit={handleSubmit}>
-            <div className='emailForm'>
-                <label className='emailAddress'>Email Address</label>
-                <input onChange={(e)=>setEmail(e.target.value)} type="email" />      
-            </div>           
-            <div className='passwordForm'>
-                <label className='password'>Password</label>
-                <input onChange={(e)=>setPassword(e.target.value)}type="password" />
-            </div>
-            <button className='regBtn'>Registreeri</button>
-        </form>
+        <div className='loginForm'>
+            <form onSubmit={handleSubmit}>
+                <div className='emailForm'>
+                    <label className='username'>Email Address</label>
+                    <input onChange={(e)=>setEmail(e.target.value)} type="email" />      
+                </div>          
+                <div className='passwordForm'>
+                    <label className='password'>Password</label>
+                    <input onChange={(e)=>setPassword(e.target.value)}type="password" />
+                </div>
+                <button className='formRegBtn'>Registreeri</button>
+            </form>
+        </div>
     </div>
   )
 }

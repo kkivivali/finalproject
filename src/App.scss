@@ -1,6 +1,28 @@
 body{
     background-color:#dcdcdc;
 }
+@mixin btn{
+    cursor: pointer;
+    width: 50%;
+}
+@mixin form{
+    display: inline-block;
+    width: 30%;
+    background-color: purple;
+    & .username{
+        display: block;
+        background-color: yellow;
+    }
+    & .password{
+        display: block;
+        background-color: orange;
+    }
+    & .user{
+        display: block;
+        width: 100%;
+    }
+}
+
 .header {
     font-family: 'Rubik Dirt', cursive;
     font-size: 10vh;
@@ -18,11 +40,6 @@ body{
     }
 }
 .container {
-    float:right;
-    width: 70%;
-    background-color: #eeff1b;
-}
-.login {
     float:right;
     width: 70%;
     background-color: #eeff1b;
@@ -63,13 +80,23 @@ body{
         color: inherit;
     }
 }
-.login_btn{
-    border: 1px solid black;
-    font-family: 'Calligraffitti', cursive;
-    font-weight: bold;
-    border: 1px solid gray;
-    align-items: center;
-    background-color: #989898;
-    color: #eeff1b;
-    width: 100%;
+.loginForm {
+   @include form;
+}
+
+.logBtn{
+   @include btn;
+    background-color: red;
+    
+}
+.regBtn{
+    @include btn;
+    background-color: green;
+    float: right;
+}
+.formLogBtn {
+ @include btn;
+}
+.formRegBtn {
+@include btn;
 }

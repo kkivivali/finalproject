@@ -4,7 +4,7 @@ import './index.scss';
 import Header from './headerComp';
 import NavMenu from './menuComp';
 import Container from './container'
-
+import Login from './login';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -13,6 +13,7 @@ root.render(
   <BrowserRouter>
   <React.StrictMode>
     <Header />
+    <Login />
     <Container />
     <NavMenu />
   </React.StrictMode>

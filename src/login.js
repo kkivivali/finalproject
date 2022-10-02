@@ -9,17 +9,18 @@ import ProtectedRoute from './logincomp/ProtectedRoute';
 
 function Login () {
     return (
-        <div className="login"> <Link to='/Signin' className='underline'>Logi Sisse</Link>
-        <div className="login"> <Link to='/Signup' className='underline'>Registreeri</Link>
-        <AuthContextProvider>
-                <Routes>
-                <Route path = '/Signup' element={<Signup />} />
-                <Route path = '/Signin' element={<Signin />} />
-                <Route path = '/Account' element={<ProtectedRoute><Account /></ProtectedRoute>} />
-                </Routes>
-        </AuthContextProvider>
-        </div>
-        </div>
+        <div className='loginForm'>
+        <button className="logBtn"><Link to='/Signin' className='underline'>Logi Sisse</Link></button>
+            <button className='regBtn'><Link to='/Signup' className='underline'>Registreeri</Link></button>
+                <AuthContextProvider>
+                    <Routes>
+                        <Route path = '/Signup' element={<Signup />} />
+                        <Route path = '/Signin' element={<Signin />} />
+                        <Route path = '/Account' element={<ProtectedRoute><Account /></ProtectedRoute>} />
+                    </Routes>
+                </AuthContextProvider>
+                </div>
+        
     );
 }
 
