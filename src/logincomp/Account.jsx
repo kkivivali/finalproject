@@ -14,6 +14,7 @@ const Account = () => {
       console.log(e.message)
     }
   }
+ 
   return (
     <div>
     <p>User Email: {user && user.email}</p>
