@@ -1,24 +1,22 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth"
-require('dotenv').config()
 
-const apiKey = process.env.API_KEY
+const ApiKey = process.env.REACT_APP_FINALPROJECT_API_KEY
+const AuthDomain = process.env.REACT_APP_FINALPROJECT_AUTH_DOMAIN
+const ProjectID = process.env.REACT_APP_FINALPROJECT_PROJECT_ID
+const StorageBucket = process.env.REACT_APP_FINALPROJECT_STORAGE_BUCKET
+const MessagingSenderID = process.env.REACT_APP_FINALPROJECT_MESSAGING_SENDER_ID
+const Firebase_APP_ID = process.env.REACT_APP_FINALPROJECT_APP_ID
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: apiKey,
-  authDomain: "finalproject-sda.firebaseapp.com",
-  projectId: "finalproject-sda",
-  storageBucket: "finalproject-sda.appspot.com",
-  messagingSenderId: "157992375236",
-  appId: "1:157992375236:web:9ee3b8a11dd72109dd0a91"
+  apiKey: ApiKey,
+  authDomain: AuthDomain,
+  projectId: ProjectID,
+  storageBucket: StorageBucket,
+  messagingSenderId: MessagingSenderID,
+  appId: Firebase_APP_ID
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app)
 export default app
