@@ -9,8 +9,8 @@ import ProtectedRoute from './logincomp/ProtectedRoute';
 
 function Login () {
     return (
-        <div className="signin"> <Link to='/Signin' className='underline'>Logi Sisse</Link>
-        <div className="signup"> <Link to='/Signup' className='underline'>Registreeri</Link>
+        <div className="login"> <Link to='/Signin' className='underline'>Logi Sisse</Link>
+        <div className="login"> <Link to='/Signup' className='underline'>Registreeri</Link>
         <AuthContextProvider>
                 <Routes>
                 <Route path = '/Signup' element={<Signup />} />
@@ -19,9 +19,8 @@ function Login () {
                 </Routes>
         </AuthContextProvider>
         </div>
-	</div>
-      
-      );
+        </div>
+    );
 }
 
 export default Login
